@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+        header, footer {
+            background-color: #f8b400;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            width: 400px;
+            padding: 20px;
+            margin: 0 auto;
+
+        }
+        h1 {
+            margin-bottom: 0.5em;
+        }
+        section {
+            margin-bottom: 1em;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kaviarensky formular</h1>
+    </header>
+    <main>
+        <form action="/action_page.php">
+            <label for="lname">Type of coffe:</label><br><br>
+            <select name="type of caffe" id="coffe"><br><br>
+                <option value="Lungo">Lungo</option>
+                <option value="Esspresso">Esspresso</option>
+                <option value="Late">Late</option>
+                <option value="double_esspresso">double_esspresso</option>
+            </select><br><br>
+            <label for="fname">Počet:</label><br>
+            <input type="text"><br><br>
+            <input type="checkbox" id="Kolac">
+            <label for="Kolac"> Kolac</label>
+            <input type="checkbox" id="Croissant">
+            <label for="Croissant"> Croissant</label><br><br>
+            <label for="fname">Meno:</label><br>
+            <input type="text" id="fname"><br><br>
+            <label for="lname">e-mail:</label><br>
+            <input type="text"><br><br>
+            <label for="lname">adresa:</label><br>
+            <input type="text" ><br><br>
+            <label for="lname">Poznamky:</label><br>
+            <input type="text" id="lname"><br><br>
+            <input type="submit" value="Objednaj"><br><br>
+
+            <table>
+        <tr>
+            <th>Meno</th>
+            <th>Priezvysko</th>
+        </tr>
+        <tr>
+            <td>Kamil</td>
+            <td>Vizy</td>
+        </tr>
+        <tr>
+            <td>Marek</td>
+            <td>Krsiak</td>
+        </tr>
+    </table>
+        </form>
+
+     <div
+         id="about">
+         <h3> O mne </h3>
+         <p> Volam sa {{ user }}</p>
+     </div>
+     <div
+         id="year">
+         {% if year %}
+            <p> {{ year }}</p>
+         {% else %}
+            <p> pozri si kalendar </p>
+         {% endif %}
+     </div>
+    </main>
+    <footer>
+        <p>Vytvorené: 20. máj 2024</p>
+        <p>&copy; {{ year }} Bali</p>
+    </footer>
+</body>
+</html>
